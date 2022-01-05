@@ -1,7 +1,7 @@
 <template>
     <div>
         <IconDark v-if="$colorMode.preference !== 'dark'" class="cursor-pointer" @click="changeTheme('dark')"/>
-        <IconLight v-else @click="changeTheme('light')" class="cursor-pointer" />
+        <IconLight v-else @click="changeTheme('light')" class="cursor-pointer text-white" />
     </div>
 </template>
 

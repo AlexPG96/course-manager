@@ -1,6 +1,9 @@
 <template>
-  <div class="container">
-    <ColorSwitch />
+  <div class="container dark:bg-black">
+    <div>
+      <ColorSwitch />
+      <Tutorial />
+    </div>
   </div>
 </template>
 
