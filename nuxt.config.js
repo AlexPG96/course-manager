@@ -15,6 +15,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/css/main.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -39,6 +40,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/svg',
+    '@nuxtjs/firebase'
   ],
 
   colorMode: {
@@ -46,6 +48,30 @@ export default {
     fallback: 'light',
     classSuffix: '',
 
+  },
+
+  firebase: {
+    config: {
+      apiKey: process.env.VUE_APP_FIREBASE_KEY,
+      authDomain: 'coursesmanager-76f12.firebaseapp.com',
+      // databaseURL: 'https://devmind-twitch.firebaseio.com',
+      projectId: 'coursesmanager-76f12',
+      storageBucket: 'coursesmanager-76f12.appspot.com',
+      messagingSenderId: '389867216354',
+      appId: '1:389867216354:web:bd4023deadbf6076916dbb',
+    },
+    services: {
+      auth: true,
+      firestore: true,
+      storage: true,
+      analytics: true,
+      perfomance: true,
+    },
+
+  },
+
+  env: {
+    VUE_APP_FIREBASE_KEY: process.env.VUE_APP_FIREBASE_KEY
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

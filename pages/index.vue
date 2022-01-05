@@ -1,9 +1,6 @@
 <template>
-  <div class="container">
-    <div>
-      <ColorSwitch />
-      <Tutorial />
-    </div>
+  <div>
+    <ColorSwitch />
   </div>
 </template>
 
